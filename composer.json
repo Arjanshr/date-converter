@@ -1,0 +1,17 @@
+{
+    "name": "arjanshr/date-converter",
+    "description": "Simple package to convert BS dates to AD and vice versa",
+    "autoload": {
+        "psr-4": {
+            "Arjanshr\\DateConverter\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../date-converter"
+        }
+    ]
+}
