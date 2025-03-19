@@ -26,7 +26,10 @@ class DateConverterServiceProvider extends ServiceProvider
     public function boot()
     {
         // You can load routes, views, or publish configuration files here if needed.
-        $this->loadRoutesFrom(__DIR__.'/routes/web.php');
-        $this->loadViewsFrom(__DIR__.'/resources/views', 'mypackage');
+        $this->loadRoutesFrom(__DIR__ . '/routes/web.php');
+        $this->loadViewsFrom(__DIR__ . '/resources/views', 'date-converter');
+        $this->publishes([
+            __DIR__ . '/config/bs_date.php' => config_path('bs_date.php'),
+        ], 'config');
     }
 }
