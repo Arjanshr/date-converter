@@ -1,8 +1,8 @@
 <?php
-
 namespace Arjanshr\DateConverter;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Config;
 
 class DateConverterServiceProvider extends ServiceProvider
 {
@@ -25,9 +25,7 @@ class DateConverterServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        // You can load routes, views, or publish configuration files here if needed.
-        $this->loadRoutesFrom(__DIR__ . '/routes/web.php');
-        $this->loadViewsFrom(__DIR__ . '/resources/views', 'date-converter');
+        // Publish the configuration file to the application's config directory
         $this->publishes([
             __DIR__ . '/config/bs_date.php' => config_path('bs_date.php'),
         ], 'config');
